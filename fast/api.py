@@ -27,7 +27,7 @@ def add_order ():
     for i in session['order_items']:
         found = i.get(str('id'))
         if order['id'] == found:
-            return "Exists"
+            abort(422,'Order Already exists')
     session['order_items'].append(order)
     return json.dumps(session['order_items'])
 
