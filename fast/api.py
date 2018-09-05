@@ -1,5 +1,5 @@
 import json
-from flask import session, abort, request
+from flask import session, abort, request, jsonify
 from fast import app
 from fast import models
 
@@ -30,3 +30,15 @@ def add_order ():
             return "Exists"
     session['order_items'].append(order)
     return json.dumps(session['order_items'])
+
+@app.route('/orders/<int:orderID>' , methods=['PUT'])
+def update_order (orderID):
+    session.clear()
+    order_status = request.get_json(silent=True)
+    session['order_items'] = models.orders
+    for i in session['order_items']:
+        order = i.get(str('id'))
+        if order == orderID:
+            i['status'] = order_status['status']
+            return jsonify(session['order_items'])
+    return 'Failed'

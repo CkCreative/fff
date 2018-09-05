@@ -6,7 +6,7 @@ client = fast.app.test_client()
 
 def test_get_all_orders():
     r = client.get('http://127.0.0.1:5000/orders')
-    assert r.status_code == 200.
+    assert r.status_code == 200
 
 
 def test_get_one_order(requests_mock):
