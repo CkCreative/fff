@@ -9,7 +9,7 @@ def test_get_all_orders():
     assert r.status_code == 200
 
 
-def test_get_one_order(requests_mock):
+def test_get_one_order():
     data = {
         "id" : 11,
         "customer_id" : 1254,
@@ -23,7 +23,7 @@ def test_get_one_order(requests_mock):
     assert r_two.status_code == 404
 
 
-def test_post_order(requests_mock):
+def test_post_order():
     data = {
         "id" : 12,
         "customer_id" : 1254,
@@ -36,7 +36,7 @@ def test_post_order(requests_mock):
     assert after.status_code == 200
 
 
-def test_update_order(requests_mock):
+def test_update_order():
     data = {
         "id" : 14,
         "customer_id" : 1254,
