@@ -1,5 +1,5 @@
 import json
-from flask import session
+from flask import session, abort, request
 from fast import app
 from fast import models
 
@@ -19,3 +19,14 @@ def single_order (orderID):
         if order == orderID:
             return json.dumps(i)
     abort(404)
+
+@app.route('/orders' , methods=['POST'])
+def add_order ():
+    order = request.get_json(silent=True)
+    session['order_items'] = models.orders
+    for i in session['order_items']:
+        found = i.get(str('id'))
+        if order['id'] == found:
+            return "Exists"
+    session['order_items'].append(order)
+    return json.dumps(session['order_items'])
