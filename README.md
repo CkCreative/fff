@@ -1,4 +1,4 @@
-#### Travis CI: [![Build Status](https://travis-ci.com/CkCreative/fff.svg?branch=dev)](https://travis-ci.com/CkCreative/fff) Better Code: [![BCH compliance](https://bettercodehub.com/edge/badge/CkCreative/fff?branch=release)](https://bettercodehub.com/)
+#### Travis CI: [![Build Status](https://travis-ci.com/CkCreative/fff.svg?branch=dev)](https://travis-ci.com/CkCreative/fff) Better Code: [![BCH compliance](https://bettercodehub.com/edge/badge/CkCreative/fff?branch=release)](https://bettercodehub.com/) Coveralls: [![Coverage Status](https://coveralls.io/repos/github/CkCreative/fff/badge.svg?branch=dev)](https://coveralls.io/github/CkCreative/fff?branch=dev)
 ## Features
 - Return a list of all orders on **GET** `/api/v1/orders`
 - Return a single order on **GET** `/api/v1/orders/<orderID>`
