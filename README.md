@@ -1,4 +1,4 @@
-## TRAVIS CI: [![Build Status](https://travis-ci.com/CkCreative/fff.svg?branch=dev)](https://travis-ci.com/CkCreative/fff)
+#### Travis CI: [![Build Status](https://travis-ci.com/CkCreative/fff.svg?branch=dev)](https://travis-ci.com/CkCreative/fff) Better Code: [![BCH compliance](https://bettercodehub.com/edge/badge/CkCreative/fff?branch=release)](https://bettercodehub.com/)
 ## Features
 - Return a list of all orders on **GET** `/orders`
 - Return a single order on **GET** `/orders/<orderID>`
