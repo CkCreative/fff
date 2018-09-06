@@ -10,7 +10,7 @@ install:
 
 # command to run tests
 script:
-  - pytest tests.py --cov
+  - pytest tests.py --cov=./
 
 # when done
 after_success:
