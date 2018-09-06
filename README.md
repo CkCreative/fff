@@ -1,9 +1,9 @@
 #### Travis CI: [![Build Status](https://travis-ci.com/CkCreative/fff.svg?branch=dev)](https://travis-ci.com/CkCreative/fff) Better Code: [![BCH compliance](https://bettercodehub.com/edge/badge/CkCreative/fff?branch=release)](https://bettercodehub.com/)
 ## Features
-- Return a list of all orders on **GET** `/orders`
-- Return a single order on **GET** `/orders/<orderID>`
-- Post an order on **POST** `/orders`
-- Update the status of the order on **PUT** `/orders/<orderID>`
+- Return a list of all orders on **GET** `/api/v1/orders`
+- Return a single order on **GET** `/api/v1/orders/<orderID>`
+- Post an order on **POST** `/api/v1/orders`
+- Update the status of the order on **PUT** `/api/v1/orders/<orderID>`
 
 ## Testing
 
@@ -18,16 +18,16 @@
 >`pytest tests.py`
 - You can also use Postman to test the endpoints. 
 
-> Sample data to post with POST `/orders`: `{
+> Sample data to post with **POST** `/api/v1/orders`: `{
         "id" : 11,
         "customer_id" : 1254,
         "status" : ""
 }`
 
-> Sample data to update order status using PUT `/orders/<orderID>`:
+> Sample data to update order status using **PUT** `/api/v1/orders/<orderID>`:
 `{
         "status" : "Completed"
  }`
 
 > **Only valid JSON is accepted for POST and PUT**
-> To be able to test PUT, first POST and then try PUT to see the changes take effect.
+> To be able to test **PUT**, first **POST** and then try **PUT** to see the changes take effect.

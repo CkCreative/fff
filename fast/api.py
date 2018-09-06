@@ -4,13 +4,13 @@ from fast import app
 from fast import models
 
 
-@app.route('/orders' , methods=['GET'])
+@app.route('/api/v1/orders' , methods=['GET'])
 def all_orders ():
     session.clear()
     session['order_items'] = models.orders
     return json.dumps(session['order_items'])
 
-@app.route('/orders/<int:orderID>' , methods=['GET'])
+@app.route('/api/v1/orders/<int:orderID>' , methods=['GET'])
 def single_order (orderID):
     session.clear()
     session['order_items'] = models.orders
@@ -20,7 +20,7 @@ def single_order (orderID):
             return json.dumps(i)
     abort(404)
 
-@app.route('/orders' , methods=['POST'])
+@app.route('/api/v1/orders' , methods=['POST'])
 def add_order ():
     order = request.get_json(silent=True)
     session['order_items'] = models.orders
@@ -31,7 +31,7 @@ def add_order ():
     session['order_items'].append(order)
     return json.dumps(session['order_items'])
 
-@app.route('/orders/<int:orderID>' , methods=['PUT'])
+@app.route('/api/v1/orders/<int:orderID>' , methods=['PUT'])
 def update_order (orderID):
     session.clear()
     order_status = request.get_json(silent=True)
