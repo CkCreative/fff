@@ -28,7 +28,7 @@ more-itertools==4.3.0
 pbr==4.2.0
 pipreqs==0.4.9
 pluggy==0.7.1
-py==1.5.4
+py==1.10.0
 pycparser==2.18
 pylint==2.1.1
 pylint-flask==0.5
